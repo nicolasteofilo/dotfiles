@@ -42,6 +42,7 @@ sudo apt update
 sudo apt install beekeeper-studio
 
 # Install softwares with apt
+apt-get install git
 for software in ${softwares[@]}; do
   if ! dpkg -l | grep -q $software; then # Insall only if not installed
     apt install "$software" -y
@@ -56,6 +57,11 @@ flatpak install flathub com.spotify.Client
 flatpak install flathub rest.insomnia.Insomnia
 flatpak install flathub org.qbittorrent.qBittorrent
 flatpak install flathub com.slack.Slack
+
+# Setting of git
+git config --global user.name "nicolasteofilo"
+git config --global user.email "nicolasteofilodecastro@gmail.com"
+git config --global core.editor "code"
 
 ## Install softwares with snap
 sudo snap install photogimp
